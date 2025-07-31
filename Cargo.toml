@@ -9,14 +9,14 @@ members = [
 exclude = [".direnv/", ".vscode/", "Cargo.lock", "*.nix", "flake.lock", ".envrc", ".github/"]
 
 [workspace.dependencies]
-bevy_app = { version = "0.16.0", default-features = false }
-bevy_ecs = { version = "0.16.0", default-features = false }
-bevy_log = { version = "0.16.0", default-features = false }
-bevy_state = { version = "0.16.0", default-features = false, features = ["bevy_app"] }
-bevy = { version = "0.16.0", default-features = false, features = ["bevy_log", "bevy_state"] }
-deluxe = { version = "0.5.0", path = "deluxe-vendored" }
-deluxe-core = { version = "0.5.0", path = "deluxe-vendored/core" }
-proc-macro2 = "1.0.93"
-quote = "1.0.38"
-sha256 = { version = "1.5.0", default-features = false }
-syn = { version = "2.0.96", features = ["full"] }
+bevy_app = { git = "ssh://git@github.com/kharmic-universe-deps/bevy-rs.git", branch = "ku-0.1.0", default-features = false }
+bevy_ecs = { git = "ssh://git@github.com/kharmic-universe-deps/bevy-rs.git", branch = "ku-0.1.0", default-features = false }
+bevy_log = { git = "ssh://git@github.com/kharmic-universe-deps/bevy-rs.git", branch = "ku-0.1.0", default-features = false }
+bevy_state = { git = "ssh://git@github.com/kharmic-universe-deps/bevy-rs.git", branch = "ku-0.1.0", default-features = false, features = ["bevy_app"] }
+bevy = { git = "ssh://git@github.com/kharmic-universe-deps/bevy-rs.git", branch = "ku-0.1.0", default-features = false, features = ["bevy_log", "bevy_state"] }
+deluxe = { version = "0.5", path = "deluxe-vendored" }
+deluxe-core = { version = "0.5", path = "deluxe-vendored/core" }
+proc-macro2 = "1.0"
+quote = "1.0"
+sha256 = { version = "1.5", default-features = false }
+syn = { version = "2.0", features = ["full"] }

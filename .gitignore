@@ -5,5 +5,5 @@ bevy-butler-core/target
 bevy-butler-proc-macro/target
 
 .direnv
-
+/.idea/
 /.vscode
