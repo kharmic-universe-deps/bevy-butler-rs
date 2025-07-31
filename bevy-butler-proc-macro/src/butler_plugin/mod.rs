@@ -25,7 +25,7 @@ pub(crate) fn macro_impl(attr: TokenStream1, item: TokenStream1) -> syn::Result<
 fn register_butler_plugin_stmts(plugin: &TypePath) -> TokenStream2 {
     quote! {
         impl #plugin {
-            pub(crate) fn _butler_plugin_sealed_marker() -> ::std::any::TypeId {
+            pub fn _butler_plugin_sealed_marker() -> ::std::any::TypeId {
                 struct SealedMarker;
 
                 ::std::any::TypeId::of::<SealedMarker>()
